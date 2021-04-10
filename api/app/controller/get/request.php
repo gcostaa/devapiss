@@ -29,7 +29,7 @@ function get(string $credentialId){
 
         echo ("<br><br><br>");
 
-        var_dump($view);
+        //var_dump($view);
 
         curl_close($request);
     
