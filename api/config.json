@@ -1,8 +1,8 @@
 {
     "keys":{
-        "oauth_consumer_key":"91a11eed0fac8959aed2da35c266542d06071b8c7",
+        "oauth_consumer_key":"",
         "oauth_signature":"-",
-        "oauth_token":"6f6dfb3b405443bd0dd8dff3f78956fa06071b90e",
-        "vault":"192.168.0.120"
+        "oauth_token":"",
+        "vault":""
     }
 }
