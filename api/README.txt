@@ -15,3 +15,7 @@ How to use:
 
     After configuring the config.json file, just call the URL 
     https://IP_OR_DNS/api/get.php?id=credential_id
+
+    or
+
+    curl -X "GET" https://server/api/get.php?id=2
