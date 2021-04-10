@@ -1,7 +1,7 @@
 <?php
 
-require_once '/var/www/html/api/app/model/keys/accessKeys.php';
-require_once '/var/www/html/api/app/view/view.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/api/app/model/keys/accessKeys.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/api/app/view/view.php';
 
 
 function get(string $credentialId){
