@@ -3,10 +3,23 @@
 class AccessKeys{
     
 
-    private $oauth_consumer_key = "04a0fa8f741161278648d2ab4c56ac42060706000";
-    private $oauth_signature = "-";
-    private $oauth_token = "636c1fb629f01243cddb23d5c0c705d1060706038";
-    private $vaultIP = "192.168.0.120";
+    private $oauth_consumer_key = "";
+    private $oauth_signature = "";
+    private $oauth_token = "";
+    private $vaultIP = "";
+
+
+    function __construct()
+    {
+        $json = file_get_contents("/var/www/html/api/config.json");
+        $data = json_decode($json,true);
+       
+        $this->oauth_consumer_key = $data["keys"]["oauth_consumer_key"];
+        $this->oauth_signature = $data["keys"]["oauth_signature"];
+        $this->oauth_token = $data["keys"]["oauth_token"];
+        $this->vaultIP = $data["keys"]["vault"];
+
+    }
 
     public function getOauthConsumerKey(){
 
@@ -68,6 +81,5 @@ class AccessKeys{
     }
 
 }
-
 
 ?>
