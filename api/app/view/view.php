@@ -26,14 +26,14 @@ class View{
         if($statusCode == 200){
 
             
-            echo ("KEY VALUES"."\n\n<br><br>");
+            echo (PHP_EOL."KEY VALUES"."<br><br>".PHP_EOL);
 
             echo("Device.... ".$response["senha"]["hostname"]
-            ."-".$response["senha"]["ip"]."<br>\n");
+            ."-".$response["senha"]["ip"]."<br>".PHP_EOL);
 
-            echo("Credential.... ".$response["senha"]["username"]."<br>\n");
+            echo("Credential.... ".$response["senha"]["username"]."<br>".PHP_EOL);
 
-            echo("Password.... ".$response["senha"]["senha"]);
+            echo("Password.... ".$response["senha"]["senha"]."".PHP_EOL);
 
 
         }else{

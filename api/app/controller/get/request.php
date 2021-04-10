@@ -3,7 +3,7 @@
 #get local directory
 
 if(empty($_SERVER["PWD"])){
-    echo "Apache";
+
     require_once $_SERVER["DOCUMENT_ROOT"].'/api/app/model/keys/accessKeys.php';
     require_once $_SERVER["DOCUMENT_ROOT"].'/api/app/view/view.php';
 }else{
