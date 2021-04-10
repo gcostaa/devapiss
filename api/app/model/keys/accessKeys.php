@@ -11,7 +11,10 @@ class AccessKeys{
 
     function __construct()
     {
-        $json = file_get_contents("/var/www/html/api/config.json");
+
+        #get values ​​from the configuration file
+
+        $json = file_get_contents($_SERVER['DOCUMENT_ROOT']."/api/config.json");
         $data = json_decode($json,true);
        
         $this->oauth_consumer_key = $data["keys"]["oauth_consumer_key"];
@@ -27,7 +30,7 @@ class AccessKeys{
 
         if (empty($key)){
 
-            echo("Consumer key não configurada");
+            echo("Consumer key is not configured");
            
         }else{
             
@@ -42,7 +45,7 @@ class AccessKeys{
 
         if (empty($key)){
 
-            echo("Token key não configurada");
+            echo("Token key is not configured");
            
         }else{
             
@@ -57,7 +60,7 @@ class AccessKeys{
 
         if (empty($key)){
 
-            echo("Signature key não configurada");
+            echo("Signature key is not configured");
            
         }else{
             
@@ -71,7 +74,7 @@ class AccessKeys{
     
          if (empty($key)){
     
-            echo("Cofre não configurada");
+            echo("Vault IP is not configured");
                
         }else{
                 

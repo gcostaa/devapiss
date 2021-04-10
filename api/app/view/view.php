@@ -8,15 +8,15 @@ class View{
     function __construct($responseRequest)
     {
 
-
-
+        #get response from senhasegura API request and convert to array
         $this->response = json_decode($responseRequest,true);
 
+        #get status code
         $this->status = $this->getHttpCode($this->response);
 
+        #displays the values ​​on the screen
         $this->display($this->response,$this->status);
-        
-        
+          
     }
 
 
@@ -26,12 +26,12 @@ class View{
         if($statusCode == 200){
 
             
-            echo ("VALORES CHAVES"."\n\n<br><br>");
+            echo ("KEY VALUES"."\n\n<br><br>");
 
-            echo("Dispositivo.... ".$response["senha"]["hostname"]
+            echo("Device.... ".$response["senha"]["hostname"]
             ."-".$response["senha"]["ip"]."<br>\n");
 
-            echo("Credencial.... ".$response["senha"]["username"]."<br>\n");
+            echo("Credential.... ".$response["senha"]["username"]."<br>\n");
 
             echo("Password.... ".$response["senha"]["senha"]);
 
